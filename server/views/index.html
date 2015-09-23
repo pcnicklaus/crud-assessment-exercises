@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+ <div class="container">
+    <div id="make-exercise">
+      <h2>Student Exercises</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Exercise Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Exercise" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="description" name="description" required>
+          </div>
+          <div class="form-group">
+            <label for="tags">Tags (separate with comma)</label>
+            <input type="text" class="form-control" id="tags"placeholder="Tags" name="tags" required>
+          </div>
+          <button type="submit" class="btn btn-default btn-success">Save Exercise</button>
+        </form>
+    </div>
+
+      <br>
+      <p id="message"></p>
+
+
+
+      <table class="table table-striped">
+        <thead>
+          <th>Exercise</th>
+          <th>Description</th>
+          <th>Tags</th>
+        </thead>
+        <tbody id="exercise-list">
+        </tbody>
+      </table>
+
+<div id="editExercises">
+        <h2>Edit The Exercise</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Exercise Name</label>
+            <input type="text" class="form-control" id="nameEdit" placeholder="Exercise" name="nameEdit" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="descriptionEdit" placeholder="description" name="descriptionEdit" required>
+          </div>
+          <div class="form-group">
+            <label for="tags">Tags (separate with comma)</label>
+            <input type="text" class="form-control" id="tagsEdit"placeholder="Tags" name="tagsEdit" required>
+          </div>
+          <button type="button" class="btn btn-default btn-success update-btn">Save Exercise</button>
+        </form>
+      </div>
+
+  </div>
+
+{% endblock %}
