@@ -91,7 +91,7 @@ it('should list ALL Exercises on /api/exercises GET', function(done) {
       });
   });
 
-  it('should update a SINGLE blob on /api/exercise/<id> PUT', function(done) {
+  it('should update a SINGLE Exercise on /api/exercise/<id> PUT', function(done) {
     chai.request(server)
       .get('/api/exercises')
       .end(function (err, res) {
@@ -112,7 +112,7 @@ it('should list ALL Exercises on /api/exercises GET', function(done) {
       });
   });
 
-  it('should delete a SINGLE blob on /api/exercise/<id> DELETE', function(done) {
+  it('should delete a SINGLE exercise on /api/exercise/<id> DELETE', function(done) {
     chai.request(server)
       .get('/api/exercises')
       .end(function (err, res) {
